@@ -45,46 +45,6 @@ app.get('/start_kohya', (req, res) => {
     res.send('Started Kohya_ss successfully!');
 });
 
-app.get('/stop_comfyui', (req, res) => {
-    exec('scripts/stop_comfyui.sh &', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error stopping ComfyUI: ${error}`);
-        }
-    });
-
-    res.send('Stopped ComfyUI successfully!');
-});
-
-app.get('/start_comfyui', (req, res) => {
-    exec('scripts/start_comfyui.sh &', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error starting ComfyUI: ${error}`);
-        }
-    });
-
-    res.send('Started ComfyUI successfully!');
-});
-
-app.get('/stop_invokeai', (req, res) => {
-    exec('scripts/stop_invokeai.sh &', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error stopping InvokeAI: ${error}`);
-        }
-    });
-
-    res.send('Stopped InvokeAI successfully!');
-});
-
-app.get('/start_invokeai', (req, res) => {
-    exec('scripts/start_invokeai.sh &', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Error starting InvokeAI: ${error}`);
-        }
-    });
-
-    res.send('Started InvokeAI successfully!');
-});
-
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
