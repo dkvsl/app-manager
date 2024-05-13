@@ -33,28 +33,4 @@ $(document).ready(function() {
             alert(data);
         });
     });
-
-    $('#stopComfyUI').click(function () {
-        $.get('/stop_comfyui', function (data) {
-            alert(data);
-        });
-    });
-
-    $('#startComfyUI').click(function () {
-        $.get('/start_comfyui', function (data) {
-            alert(data);
-        });
-    });
-
-    $('#stopInvokeAI').click(function () {
-        $.get('/stop_invokeai', function (data) {
-            alert(data);
-        });
-    });
-
-    $('#startInvokeAI').click(function () {
-        $.get('/start_invokeai', function (data) {
-            alert(data);
-        });
-    });
 });
